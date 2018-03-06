@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+	<html class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Flight Searcher</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zebra_datepicker/dist/css/bootstrap/zebra_datepicker.min.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="css/superfish.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+
+	<!-- CS Select -->
+	<link rel="stylesheet" href="css/cs-select.css">
+	<link rel="stylesheet" href="css/cs-skin-border.css">
+
+	<link rel="stylesheet" type="text/css" href="css/timepicki.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style2.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+
+		<div id="fh5co-wrapper">
+		<div id="fh5co-page">
+
+			<div class="fh5co-hero">
+			<div class="fh5co-overlay"></div>
+			<header>
+				<div class="col-sm-12 col-md-12 col-xs-12 col-xxs-12" align="center">
+						<span id="topMessage"><h1 class="brand">TripYork.com</h1></span>
+				</div>
+			</header>
+			<div class="fh5co-cover" data-stellar-background-ratio="0.5">
+
+				<div class="desc">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-md-12">
+								<div class="tabulation animate-box">
+								  <!-- Nav tabs -->
+								   <ul class="nav nav-tabs" role="tablist">
+								      <li role="presentation" class="my_nav active">
+								      	<a href="#flights" aria-controls="flights" role="tab" data-toggle="tab" id="flights_tab">Flights</a>
+								      </li>
+								      <li role="presentation" class="my_nav">
+								    	   <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab" id="hotels_tab">Hotels</a>
+								      </li>
+								      <li role="presentation" class="my_nav">
+								    	   <a href="#packages" aria-controls="packages" role="tab" data-toggle="tab" id="flights_hotels_tab">Flights + Hotels</a>
+								      </li>
+								      <li role="presentation" class="my_nav">
+								    	   <a href="#cars" aria-controls="cars" role="tab" data-toggle="tab" id="car_tab">Car Rental</a>
+								      </li>
+								   </ul>
+
+								   <!-- Tab panes -->
+									<div class="tab-content">
+									 <div role="tabpanel" class="tab-pane active" id="flights">
+
+										<div class="row">
+
+
+											<div class="col-xxs-12 col-xs-12 col-sm-8 col-lg-6 col-sm-offset-2 col-lg-offset-0 mt">
+												<div class="input-field">
+													<div class="input-group">
+														<div class="input-group-addon">
+															<label for="from" class="label-inline">From :</label>
+														</div>
+														<input type="text" autocomplete="off" data-provide="typeahead" class="form-control typeahead flight_source" id="flight_src" placeholder="Search Source.." />
+													</div>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-12 col-sm-8 col-lg-6 col-sm-offset-2 col-lg-offset-0 mt">
+												<div class="input-field">
+													<div class="input-group">
+														<div class="input-group-addon">
+															<label for="from" class="label-inline">To :</label>
+														</div>
+														<input autocorrect="off" type="text" class="form-control typeahead destination" id="flight_dest" autocomplete="off" data-provide="typeahead" placeholder="Search Destination.."/>
+													</div>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 col-sm-4 col-lg-4 col-sm-offset-2 col-lg-offset-0 mt alternate">
+													<div class="input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
+														<div class="input-group-addon">
+															<span class="glyphicon glyphicon-calendar"></span>
+														</div>
+                            <input type="text" class="form-control  start_date" id="flight_start" placeholder="depart"/>
+                         </div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 col-sm-4 col-lg-4 mt alternate" id="rtb">
+												<div class="input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</div>
+													<input type="text" class="form-control end_date" id="flight_end" placeholder="return"/>
+												</div>
+											</div>
+
+											<div class="col-xxs-12 col-xs-6 col-sm-8 col-lg-4 col-sm-offset-2 col-lg-offset-0 mt">
+												<section>
+													<select class="form-control adults" id="flight_passenger">
+														<option value="1" selected>1 passenger</option>
+														<option value="2">2 passengers</option>
+														<option value="3">3 passengers</option>
+														<option value="4">4 passengers</option>
+														<option value="5">5 passengers</option>
+														<option value="6">6 passengers</option>
+														<option value="7">7 passengers</option>
+														<option value="8">8 passengers</option>
+														<option value="9">9 passengers</option>
+														<option value="10">10 passengers</option>
+													</select>
+												</section>
+											</div>
+											</div>
+											<div class="row">
+												<div class="col-xxs-6 col-xs-6 col-sm-3 col-sm-offset-2 col-lg-offset-0 mt">
+													<section>
+														<label for="round_trip">
+														<input id="round_trip" type="radio" checked="checked" name="round_trip_val" value="1">
+														Round Trip</label>
+													</section>
+												</div>
+
+												<div class="col-xxs-6 col-xs-6 ol-sm-3 mt">
+													<section>
+														<label for="one_way">
+														<input id="one_way" type="radio" name="round_trip_val" value="2">
+														One Way</label>
+													</section>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+													<input id="searchFlight" type="submit" class="btn btn-primary btn-block" value="Search Flight">
+												</div>
+											</div>
+
+									 </div>
+
+									 <div role="tabpanel" class="tab-pane" id="hotels">
+									 	<div class="row">
+											<div class="col-xxs-12 col-xs-12 mt">
+												<div class="input-field">
+													<div class="input-group">
+														<div class="input-group-addon">
+															<label for="from">City:</label>
+														</div>
+														<input autocorrect="off" type="text" class="form-control typeahead hotel_source" id="hotel_src" placeholder="Search City" autocomplete="off" data-provide="typeahead"/>
+													</div>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</div>
+													<input id="hotel_start" type="text" class="form-control start_date" placeholder="Check-in"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</div>
+													<input id="hotel_end" type="text" class="form-control end_date" placeholder="Check-out"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<select id="hotel_guests" class="form-control adults">
+														<option value="1" selected>1 adult</option>
+														<option value="2">2 adults</option>
+														<option value="3">3 adults</option>
+														<option value="4">4 adults</option>
+														<option value="5">5 adults</option>
+														<option value="6">6 adults</option>
+														<option value="7">7 adults</option>
+														<option value="8">8 adults</option>
+														<option value="9">9 adults</option>
+														<option value="10">10 adults</option>
+													</select>
+												</section>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<select id="hotel_rooms" class="form-control children">
+														<option value="0" selected>0 children</option>
+														<option value="1">1 children</option>
+														<option value="2">2 children</option>
+														<option value="3">3 children</option>
+														<option value="4">4 children</option>
+														<option value="5">5 children</option>
+														<option value="6">6 children</option>
+														<option value="7">7 children</option>
+														<option value="8">8 children</option>
+														<option value="9">9 children</option>
+													</select>
+												</section>
+											</div>
+
+											<div class="col-xs-12">
+												<input id="searchHotels" type="submit" class="btn btn-primary btn-block" value="Search Hotel">
+											</div>
+										</div>
+									 </div>
+
+									 <div role="tabpanel" class="tab-pane" id="packages">
+									 	<div class="row">
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field input-group">
+													<div class="input-group-addon">
+														<label for="from">From:</label>
+													</div>
+													<input autocorrect="off" type="text" class="form-control typeahead flight_source" id="fh_src" placeholder="Search Source" autocomplete="off" data-provide="typeahead"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field input-group">
+													<div class="input-group-addon">
+														<label for="from">To:</label>
+													</div>
+													<input autocorrect="off" type="text" class="form-control typeahead destination" id="fh_dest" placeholder="Search Destination" autocomplete="off" data-provide="typeahead"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</div>
+													<input id="fh_start" type="text" class="form-control start_date" placeholder="Check-in"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</div>
+													<input id="fh_end" type="text" class="form-control end_date" placeholder="Check-out"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<select id="fh_adults" class="form-control adults">
+														<option value="1" selected>1 adult</option>
+														<option value="2">2 adults</option>
+														<option value="3">3 adults</option>
+														<option value="4">4 adults</option>
+														<option value="5">5 adults</option>
+														<option value="6">6 adults</option>
+														<option value="7">7 adults</option>
+														<option value="8">8 adults</option>
+														<option value="9">9 adults</option>
+														<option value="10">10 adults</option>
+													</select>
+												</section>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<select id="fh_children" class="form-control children">
+														<option value="0" selected>0 children</option>
+														<option value="1">1 children</option>
+														<option value="2">2 children</option>
+														<option value="3">3 children</option>
+														<option value="4">4 children</option>
+														<option value="5">5 children</option>
+														<option value="6">6 children</option>
+														<option value="7">7 children</option>
+														<option value="8">8 children</option>
+														<option value="9">9 children</option>
+													</select>
+												</section>
+											</div>
+
+											<div class="col-xs-12">
+												<input id="searchFlightsHotels" type="submit" class="btn btn-primary btn-block" value="Search Flights + Hotels">
+											</div>
+										</div>
+									 </div>
+
+									 <div role="tabpanel" class="tab-pane" id="cars">
+									 	<div class="row">
+											<div class="col-xxs-12 col-xs-12 mt">
+												<div class="input-field input-group">
+													<div class="input-group-addon">
+														<label for="from">City:</label>
+													</div>
+													<input autocorrect="off" type="text" class="form-control typeahead hotel_source" id="car_src" placeholder="Search City" autocomplete="off" data-provide="typeahead"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</div>
+													<input id="car_start" type="text" class="form-control start_date" placeholder="Pick up date"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field input-group">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-time"></span>
+													</div>
+													<input id="car_start_time" type="text" name="timepicker" class="form-control timepicker start_time" placeholder="Pick up time"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-calendar"></span>
+													</div>
+													<input id="car_end" type="text" class="form-control end_date" placeholder="Drop off date"/>
+												</div>
+											</div>
+
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field input-group">
+													<div class="input-group-addon">
+														<span class="glyphicon glyphicon-time"></span>
+													</div>
+													<input id="car_end_time" type="text" name="timepicker" class="form-control timepicker end_time" placeholder="Drop off time"/>
+												</div>
+											</div>
+
+											<div class="col-xs-12">
+												<input id="searchCars" type="submit" class="btn btn-primary btn-block" value="Search Cars">
+											</div>
+										</div>
+									 </div>
+									</div>
+									<div class="col-sm-12 col-md-12 col-xs-12 col-xxs-12" align="center">
+										<h3><font color="black">
+											<span id="downMessage"></span>
+										</font></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row" style="margin-top : 22% ;">
+							<h1 class="brand">Choose your destination now</h1>
+						</div>
+						<div class="row">
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#"  class="img-thumbnail"><img src="images/SJU.jpg" alt="San Juan" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>San Juan</h6>
+								<p>Puerto Rico</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#"  class="img-thumbnail"><img src="images/CDG.jpg" alt="Paris" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>Paris</h6>
+								<p>France</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#"  class="img-thumbnail"><img src="images/YYC.jpg" alt="Calgary" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>Calgary</h6>
+								<p>Canada</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#"  class="img-thumbnail"><img src="images/JFK.jpg" alt="New York" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>New York</h6>
+								<p>United States</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#" class="img-thumbnail"><img src="images/YYZ.jpg" alt="Toronto" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>Toronto</h6>
+								<p>Canada</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#" class="img-thumbnail"><img src="images/LHR.jpg" alt="London" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>London</h6>
+								<p>United Kingdom</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#" class="img-thumbnail"><img src="images/DEL.jpg" alt="New Delhi" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>New Delhi</h6>
+								<p>India</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#" class="img-thumbnail"><img src="images/SYD.jpg" alt="Sydney" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>Sydney</h6>
+								<p>Australia</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#" class="img-thumbnail"><img src="images/TLV.jpg" alt="Tel Aviv" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>Tel Aviv</h6>
+								<p>Israel</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#" class="img-thumbnail"><img src="images/BKK.jpg" alt="Bangkok" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>Bangkok</h6>
+								<p>Thailand</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#" class="img-thumbnail"><img src="images/AMS.jpg" alt="Amsterdam" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>Amsterdam</h6>
+								<p>Netherlands</p></a>
+							</div>
+							<div class="col-xs-6 col-sm-4 col-lg-3 city">
+								<a href="#" class="img-thumbnail"><img src="images/FCO.jpg" alt="Rome" class="img img-responsive img-rounded">
+								<h6><span class="glyphicon glyphicon-map-marker"></span>Rome</h6>
+								<p>Italy</p></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+
+
+
+	</div>
+	<!-- END fh5co-page -->
+
+	</div>
+	<!-- END fh5co-wrapper -->
+
+	<!-- jQuery -->
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/zebra_datepicker/dist/zebra_datepicker.min.js"></script>
+
+	<script src="js/timepicki.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/typeahead.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/sticky.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Date Picker -->
+	<script src="js/bootstrap-datepicker.min.js"></script>
+	<!-- CS Select -->
+	<script src="js/classie.js"></script>
+	<script src="js/selectFx.js"></script>
+
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+	<!-- <script src="js/refactored.js"></script> -->
+
+	</body>
+</html>

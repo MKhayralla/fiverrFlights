@@ -1,0 +1,56 @@
+.my_nav > a {
+  color: #2b303d ;
+  font-size: 18px ;
+}
+.my_nav.active a {
+  color: #2b303d ;
+  background-color: white ;
+  font-size: 18px ;
+  border-bottom: 2px solid #2b303d ;
+}
+select {
+  height: 60px ;
+}
+.brand {
+  padding-top: 20px ;
+  text-align: center;
+  font-weight: 600;
+  z-index: 1 ;
+  color: rgb(43,48,61) ;
+}
+.input-group-addon {
+  max-height: 60px ;
+  border: none ;
+  background-color: white ;
+}
+
+.input-group-addon label {
+  font-family: "gibson" ;
+}
+.tab-content {
+  background-color: #F78536 ;
+}
+.img-responsive {
+  width: 100% ;
+}
+.city {
+  background-color: white !important ;
+  cursor: pointer;
+  padding: 5px 5px 5px 5px ;
+}
+.city h6 {
+  font-family: monospace;
+  color: rgb(43,48,61) ;
+  text-align: center ;
+  font-weight: bold;
+  margin-top: 2px ;
+}
+.city p {
+  font-family: monospace !important;
+  color: #808080 !important ;
+  text-align: center !important ;
+  font-size: 12px !important ;
+}
+.img-thumbnail:hover {
+  border-color: #1e88e5 ;
+}
