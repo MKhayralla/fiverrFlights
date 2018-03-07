@@ -9,6 +9,11 @@
   font-family: 'gibson';
   src: url("../fonts/gibson/Gibson-Regular.ttf");
 }
+@font-face {
+  font-family: 'gibson';
+  src: url("../fonts/gibson/gibson-bold.ttf");
+  font-weight: bold;
+}
 /* =======================================================
 *
 * 	Template Style
@@ -565,11 +570,11 @@ figure {
 }
 .tabulation input[type="text"] {
   background: white;
-  font-size: 18px ;
+  font-size: 16px ;
   font-style: normal;
   font-family: "gibson" ;
   font-stretch: 100% ;
-  font-weight: 400;
+  font-weight: bold;
   text-align: center ;
   width: 100% ;
   height: 60px ;
@@ -580,7 +585,7 @@ figure {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
-  color: #2b303d !important;
+  color: black !important;
 }
 .tabulation input[type="text"]::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -601,12 +606,7 @@ figure {
 .tabulation input[type="text"]:focus {
   border-bottom: 4px solid #1e88e5 ;
 }
-@media screen and (max-width: 480px) {
-  .tabulation input[type="text"] {
-    width: 55%;
-    float: right;
-  }
-}
+
 @media screen and (max-width: 480px) {
   .tabulation .cs-select {
     width: 55%;
@@ -1502,6 +1502,7 @@ option {
   font-size: 14px;
   font-family: "gibson" ;
   padding: 5px 10px !important;
+  margin-bottom: 10px ;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1523,12 +1524,6 @@ option {
 .tabulation select:-moz-placeholder {
   /* Firefox 18- */
   color: #F78536 !important;
-}
-@media screen and (max-width: 480px) {
-  .tabulation select {
-    width: 55%;
-    float: right;
-  }
 }
 #fh5co-contact .form-group {
   margin-bottom: 30px;

@@ -86,14 +86,12 @@
 
 
 											<div class="col-xxs-12 col-xs-12 col-sm-8 col-lg-6 col-sm-offset-2 col-lg-offset-0 mt">
-												<div class="input-field">
-													<div class="input-group">
+													<div class="input-field input-group">
 														<div class="input-group-addon">
 															<label for="from" class="label-inline">From :</label>
 														</div>
 														<input type="text" autocomplete="off" data-provide="typeahead" class="form-control typeahead flight_source" id="flight_src" placeholder="Search Source.." />
 													</div>
-												</div>
 											</div>
 											<div class="col-xxs-12 col-xs-12 col-sm-8 col-lg-6 col-sm-offset-2 col-lg-offset-0 mt">
 												<div class="input-field">
@@ -105,20 +103,22 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-xxs-12 col-xs-6 col-sm-4 col-lg-4 col-sm-offset-2 col-lg-offset-0 mt alternate">
-													<div class="input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
+											<div id="flight-date">
+												<div class="col-xxs-12 col-xs-6 col-sm-4 col-lg-4 col-sm-offset-2 col-lg-offset-0 mt alternate">
+														<div class="input-group date">
+															<div class="input-group-addon">
+																<span class="glyphicon glyphicon-calendar"></span>
+															</div>
+	                            <input type="text" class="form-control  start_date flight-dates" id="flight_start" placeholder="depart"/>
+	                         </div>
+												</div>
+												<div class="col-xxs-12 col-xs-6 col-sm-4 col-lg-4 mt alternate" id="rtb">
+													<div class="input-group date">
 														<div class="input-group-addon">
 															<span class="glyphicon glyphicon-calendar"></span>
 														</div>
-                            <input type="text" class="form-control  start_date" id="flight_start" placeholder="depart"/>
-                         </div>
-											</div>
-											<div class="col-xxs-12 col-xs-6 col-sm-4 col-lg-4 mt alternate" id="rtb">
-												<div class="input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
-													<div class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
+														<input type="text" class="form-control end_date flight-dates" id="flight_end" placeholder="return"/>
 													</div>
-													<input type="text" class="form-control end_date" id="flight_end" placeholder="return"/>
 												</div>
 											</div>
 
@@ -176,20 +176,22 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-xxs-12 col-xs-6 mt alternate">
-												<div class="input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
-													<div class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
+											<div id="hotel-date">
+												<div class="col-xxs-12 col-xs-6 mt alternate">
+													<div class="input-group date">
+														<div class="input-group-addon">
+															<span class="glyphicon glyphicon-calendar"></span>
+														</div>
+														<input id="hotel_start" type="text" class="form-control start_date hotel-dates" placeholder="Check-in"/>
 													</div>
-													<input id="hotel_start" type="text" class="form-control start_date" placeholder="Check-in"/>
 												</div>
-											</div>
-											<div class="col-xxs-12 col-xs-6 mt alternate">
-												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
-													<div class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
+												<div class="col-xxs-12 col-xs-6 mt alternate">
+													<div class="input-field input-group date">
+														<div class="input-group-addon">
+															<span class="glyphicon glyphicon-calendar"></span>
+														</div>
+														<input id="hotel_end" type="text" class="form-control end_date hotel-dates" placeholder="Check-out"/>
 													</div>
-													<input id="hotel_end" type="text" class="form-control end_date" placeholder="Check-out"/>
 												</div>
 											</div>
 											<div class="col-xxs-12 col-xs-6 mt">
@@ -249,20 +251,22 @@
 													<input autocorrect="off" type="text" class="form-control typeahead destination" id="fh_dest" placeholder="Search Destination" autocomplete="off" data-provide="typeahead"/>
 												</div>
 											</div>
-											<div class="col-xxs-12 col-xs-6 mt alternate">
-												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
-													<div class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
+											<div id="fh-date">
+												<div class="col-xxs-12 col-xs-6 mt alternate">
+													<div class="input-field input-group date">
+														<div class="input-group-addon">
+															<span class="glyphicon glyphicon-calendar"></span>
+														</div>
+														<input id="fh_start" type="text" class="form-control start_date fh-dates" placeholder="Check-in"/>
 													</div>
-													<input id="fh_start" type="text" class="form-control start_date" placeholder="Check-in"/>
 												</div>
-											</div>
-											<div class="col-xxs-12 col-xs-6 mt alternate">
-												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
-													<div class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
+												<div class="col-xxs-12 col-xs-6 mt alternate">
+													<div class="input-field input-group date">
+														<div class="input-group-addon">
+															<span class="glyphicon glyphicon-calendar"></span>
+														</div>
+														<input id="fh_end" type="text" class="form-control end_date fh-dates" placeholder="Check-out"/>
 													</div>
-													<input id="fh_end" type="text" class="form-control end_date" placeholder="Check-out"/>
 												</div>
 											</div>
 											<div class="col-xxs-12 col-xs-6 mt">
@@ -314,37 +318,39 @@
 													<input autocorrect="off" type="text" class="form-control typeahead hotel_source" id="car_src" placeholder="Search City" autocomplete="off" data-provide="typeahead"/>
 												</div>
 											</div>
-											<div class="col-xxs-12 col-xs-6 mt alternate">
-												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
-													<div class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
+											<div id="car-date">
+												<div class="col-xxs-12 col-xs-6 mt alternate">
+													<div class="input-field input-group date">
+														<div class="input-group-addon">
+															<span class="glyphicon glyphicon-calendar"></span>
+														</div>
+														<input id="car_start" type="text" class="form-control start_date car-dates" placeholder="Pick up date"/>
 													</div>
-													<input id="car_start" type="text" class="form-control start_date" placeholder="Pick up date"/>
 												</div>
-											</div>
-											<div class="col-xxs-12 col-xs-6 mt">
-												<div class="input-field input-group">
-													<div class="input-group-addon">
-														<span class="glyphicon glyphicon-time"></span>
+												<div class="col-xxs-12 col-xs-6 mt">
+													<div class="input-field input-group">
+														<div class="input-group-addon">
+															<span class="glyphicon glyphicon-time"></span>
+														</div>
+														<input id="car_start_time" type="text" name="timepicker" class="form-control timepicker start_time" placeholder="Pick up time"/>
 													</div>
-													<input id="car_start_time" type="text" name="timepicker" class="form-control timepicker start_time" placeholder="Pick up time"/>
 												</div>
-											</div>
-											<div class="col-xxs-12 col-xs-6 mt alternate">
-												<div class="input-field input-group date" data-provide="datepicker" data-date-format="Ddd Myy">
-													<div class="input-group-addon">
-														<span class="glyphicon glyphicon-calendar"></span>
+												<div class="col-xxs-12 col-xs-6 mt alternate">
+													<div class="input-field input-group date">
+														<div class="input-group-addon">
+															<span class="glyphicon glyphicon-calendar"></span>
+														</div>
+														<input id="car_end" type="text" class="form-control end_date car-dates" placeholder="Drop off date"/>
 													</div>
-													<input id="car_end" type="text" class="form-control end_date" placeholder="Drop off date"/>
 												</div>
-											</div>
 
-											<div class="col-xxs-12 col-xs-6 mt">
-												<div class="input-field input-group">
-													<div class="input-group-addon">
-														<span class="glyphicon glyphicon-time"></span>
+												<div class="col-xxs-12 col-xs-6 mt">
+													<div class="input-field input-group">
+														<div class="input-group-addon">
+															<span class="glyphicon glyphicon-time"></span>
+														</div>
+														<input id="car_end_time" type="text" name="timepicker" class="form-control timepicker end_time" placeholder="Drop off time"/>
 													</div>
-													<input id="car_end_time" type="text" name="timepicker" class="form-control timepicker end_time" placeholder="Drop off time"/>
 												</div>
 											</div>
 
@@ -480,6 +486,19 @@
 
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
+	<!--datepicker-->
+	<script type="text/javascript">
+		$(document).ready(()=>{
+			$('#flight-date').datepicker({inputs: $('.flight-dates')
+		,format : 'Ddd Myy'});
+		$('#hotel-date').datepicker({inputs: $('.hotel-dates')
+	,format : 'Ddd Myy'});
+	$('#fh-date').datepicker({inputs: $('.fh-dates')
+,format : 'Ddd Myy'});
+$('#car-date').datepicker({inputs: $('.car-dates')
+,format : 'Ddd Myy'});
+		})
+	</script>
 	<!-- <script src="js/refactored.js"></script> -->
 
 	</body>

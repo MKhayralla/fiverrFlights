@@ -39,18 +39,49 @@ select {
   padding: 5px 5px 5px 5px ;
 }
 .city h6 {
-  font-family: monospace;
-  color: rgb(43,48,61) ;
+  font-family: Lato, sans-serif;
+  font-size: 14px ;
+  color: rgb(68,68,68) ;
   text-align: center ;
-  font-weight: bold;
   margin-top: 2px ;
+  margin-bottom: 1px ;
 }
 .city p {
-  font-family: monospace !important;
+  font-family: Lato, sans-serif !important;
   color: #808080 !important ;
   text-align: center !important ;
   font-size: 12px !important ;
+  margin-bottom: 1px !important ;
 }
 .img-thumbnail:hover {
   border-color: #1e88e5 ;
+  background-color: #F0F8FF ;
+}
+.nav-tabs > li > a {
+  color: black ;
+  font-family: "gibson" ;
+  font-size: 14px ;
+}
+.my_nav.active > a{
+  background-color: white !important ;
+  color: black !important;
+  border-bottom: 2px solid black !important;
+  font-family: "gibson" !important ;
+  font-size: 14px !important ;
+}
+.my_nav {
+  width: 25% ;
+}
+td.day {
+  color: black !important ;
+  background-color: white !important ;
+}
+td.day:hover {
+  border: 1px solid #6495ED !important ;
+}
+th.dow , th.datepicker-switch {
+  color: black !important ;
+  background-color: white !important ;
+  font-family: "gibson" ;
+  font-weight: bold;
 }
