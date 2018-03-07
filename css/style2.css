@@ -92,7 +92,7 @@ th.dow , th.datepicker-switch {
   font-weight: bold;
 }
 .border-left {
-  border-left: 2px solid black ;
+  border-left: 1px solid lightgray ;
 }
 .datepicker {
   min-width: 50% !important ;
