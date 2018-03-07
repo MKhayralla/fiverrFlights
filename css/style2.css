@@ -61,6 +61,7 @@ select {
   color: black ;
   font-family: "gibson" ;
   font-size: 14px ;
+  height: 75px ;
 }
 .my_nav.active > a{
   background-color: white !important ;
@@ -72,9 +73,13 @@ select {
 .my_nav {
   width: 25% ;
 }
+.table-condensed {
+  width: 100% ;
+}
 td.day {
   color: black !important ;
   background-color: white !important ;
+  border : none !important ;
 }
 td.day:hover {
   border: 1px solid #6495ED !important ;
@@ -84,4 +89,10 @@ th.dow , th.datepicker-switch {
   background-color: white !important ;
   font-family: "gibson" ;
   font-weight: bold;
+}
+.border-left {
+  border-left: 2px solid black ;
+}
+.datepicker {
+  min-width: 50% !important ;
 }
