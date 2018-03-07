@@ -72,6 +72,7 @@ select {
 }
 .my_nav {
   width: 25% ;
+  text-align: center;
 }
 .table-condensed {
   width: 100% ;
@@ -95,4 +96,26 @@ th.dow , th.datepicker-switch {
 }
 .datepicker {
   min-width: 50% !important ;
+}
+input[type="radio"] {
+  color: black  !important;
+  cursor: pointer !important;
+  content: "" ;
+  /* create custom radiobutton appearance */
+  display: inline-block ;
+  width: 15px ;
+  height: 15px ;
+  padding: 3px ;
+  margin-right: 5px ;
+  /* background-color only for content */
+  background-clip: content-box ;
+  border: 1px solid black ;
+  border-radius: 50% ;
+}
+
+label.black {
+  color: black ;
+  font-family: "gibson" ;
+  font-weight: bold;
+  cursor: pointer;
 }
